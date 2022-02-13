@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+/* ----------------------
+/* Custom Properties ---- */
+/* ---------------------- */
+
+:root {
+  /* Colors */
+  --white: #ffffff;
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --light-purple: #766CF1;
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  /* Fonts Families */
+  --ff-normal: 'Red Hat Display', sans-serif;
+  /* Font Weights */
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --fw-black: 900;
+  	/* Font Sizes */
+	--fs-900: 9.375rem;
+	--fs-800: 6.25rem;
+	--fs-700: 3.5rem;
+	--fs-600: 2rem;
+	--fs-500: 1.75rem;
+	--fs-400: 1.125rem;
+	--fs-300: 1rem;
+	--fs-200: 0.875rem;
+}
+
+/* ---------------------- */
+/* Reset (modified from Scrimba Tutorial) ---------------- */
+/* ---------------------- */
+
+/* Box Sizing */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Set Margin to 0 for most elements */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+	margin: 0;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* Make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* Utilities */
+
+/* Placeholder */
+
+/* Set up the body */
+body {
+	font-family: var(--ff-normal);
+  font-weight: var(--fw-medium);
+	font-size: var(--fs-300);
+	color: var(--desaturated-blue);
+	background-color: var(--pale-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1.5em;
+}
+
+.container__hero-image {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.container__content {
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  background-color: var(--white);
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.content__title {
+  color: var(--dark-blue);
+  text-align: center;
+  font-weight: var(--fw-black);
+}
+
+.content__subtitle {
+  text-align: center;
+  line-height: 1.5;
+  margin: 1em 0em;
+}
+
+.pricing__container {
+  background-color: var(--very-pale-blue);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1em;
+}
+
+.pricing__icon {
+  margin-right: 1em;
+}
+
+.pricing__labels {
+  flex-grow: 1;
+}
+
+.pricing__label--bold {
+  font-weight: var(--fw-black);
+  color: var(--dark-blue);
+  margin-bottom: .25em;
+}
+
+.pricing__label--reg {
+  /* placeholder - no styles needed */
+}
+
+.pricing__link {
+ color: var(--bright-blue);
+ text-decoration: underline;
+ font-weight: var(--fw-bold);
+ text-align: right;
+ cursor: pointer;
+}
+
+.pricing__link:hover {
+  color: var(--light-purple);
+}
+
+.btn--primary {
+  background-color: var(--bright-blue);
+  border-radius: 8px;
+  margin: 1em 0em;
+  padding: 1em;
+  color: var(--white);
+  border: none;
+  font-weight: var(--fw-bold);
+  cursor: pointer;
+  /* box shadow here */
+}
+
+.btn--primary:hover {
+  background-color: var(--light-purple);
+}
+
+.btn--tertiary {
+  border: none;
+  background-color: transparent;
+  color: var(--desaturated-blue);
+  font-weight: var(--fw-bold);
+  cursor: pointer;
+}
+
+.btn--tertiary:hover {
+  color: var(--dark-blue);
+}
